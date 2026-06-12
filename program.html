@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon"  href="./src/assets/percik-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web-ppdb</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="./src/navbar.js" defer></script>
+    <!--Navigation-->
+    <header class="border-b border-gray-200 bg-blue-400 dark:border-gray-800 dark:bg-gray-900">
+      <div class="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+        <a href="#" title="" class="flex text-xl">
+          <span class="font-bold text-blue-800 dark:text-blue-200">PERCIK</span>
+          <span class="text-slate-600 dark:text-slate-300">.KIIC</span>
+        </a>
+
+        <div class="flex flex-1 items-center justify-end md:justify-between">
+          <nav aria-label="Global" class="hidden md:block">
+            <ul class="flex items-center gap-6 text-sm">
+              <li>
+                <a class=" text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="index.html"> PPDB </a>
+              </li>
+              <li>
+                <a class="border-b-2 border-black-500 pb-5 text-sm font-medium text-gray-900  dark:text-white" href="program.html"> Program </a>
+              </li>
+              <li>
+                <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="Fasilitas.html"> Fasilitas </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <div class="hidden sm:flex sm:gap-4">
+              <a href="#" class="block shrink-0">
+                <span class="sr-only">Profile</span>
+                <img alt="Man" src="./src/assets/percik-logo.png" class="h-10 w-10 rounded-full object-cover" />
+              </a>
+            </div>
+            <!-- dropdown menu -->
+            <div class="relative inline-block text-left md:hidden">
+              <button id="menu-btn" class="p-2.5 text-gray-600 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+
+              <div id="dropdown-menu" class="absolute right-0 z-50 mt-2 w-56 hidden origin-top-right transition-all duration-200 ease-out">
+                <div class="rounded-lg bg-white dark:bg-gray-900 shadow-lg ring-1 ring-black/5 dark:ring-white/10 overflow-hidden">
+                  <div class="p-1">
+                    <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">PPDB</a>
+                    <a href="program.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">Program</a>
+                    <a href="Fasilitas.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">Fasilitas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //////////////////////////////////////////////-->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Hero-->
+<section class="relative py-24 px-6 bg-gradient-to-br from-cyan-500 to-blue-600 dark:from-gray-900 dark:to-gray-600 via-blue-600 to-cyan-500 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
+  <div class="relative max-w-4xl mx-auto text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-black mb-6">
+      SMK Perguruan Cikini KIIC Karawang
+    </h1>
+    <p class="text-xl text-black/90 mb-8 max-w-2xl mx-auto">
+      Kami menyediakan 5 program kejuruan yang dapat di pilih oleh calon peserta didik sesuai dengan minat
+    </p>
+    <a href="#Program" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-xl">
+      Explore Programs
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+            <!-- //////////////////////////////////////////////-->
+<section id="Program" class="relative bg-blue-100 dark:bg-gray-900 min-h-[90vh] flex items-left transition-colors duration-300">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+        Program Kejuruan
+        <br>
+      </h1>
+
+      <!-- Subheading -->
+      <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Bergabunglah dengan program kejuruan kami yang dirancang untuk mempersiapkan Anda menghadapi dunia kerja di KIIC.
+      </p>
+<div class="margin-12 relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden group shadow-sm border border-gray-100 dark:border-gray-800">
+  <div class="flex text-left overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+    <!-- Slide 1 -->
+    <div id="hero-slide-1" class="snap-start shrink-0 w-full relative h-[400px]">
+      <img src="./src/assets/TM.jpg" alt="Nature" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent flex flex-col justify-end p-8">
+        <span class="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full mb-3 w-max tracking-wide">TP</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Teknik Pemesinan</h2>
+        <p class="text-gray-200 max-w-md text-sm sm:text-base">Mempelajari cara pengoperasian mesin CNC, Bubut, dan menguasai teknik pengelasan.</p>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div id="hero-slide-2" class="snap-start shrink-0 w-full relative h-[400px]">
+      <img src="./src/assets/TO.jpg" alt="Coffee" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent flex flex-col justify-end p-8">
+        <span class="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full mb-3 w-max tracking-wide">TKR</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Teknik Kendaraan Ringan</h2>
+        <p class="text-gray-200 max-w-md text-sm sm:text-base">Mempelajari cara perawatan dan perbaikan kendaraan bermotor serta sistem elektriknya.</p>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div id="hero-slide-3" class="snap-start shrink-0 w-full relative h-[400px]">
+      <img src="./src/assets/TJKT.jpg" alt="Journey" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent flex flex-col justify-end p-8">
+        <span class="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full mb-3 w-max tracking-wide">TJKT</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Teknik Komputer Jaringan dan Telekomunikasi</h2>
+        <p class="text-gray-200 max-w-md text-sm sm:text-base">Mempelajari cara instalasi, konfigurasi, dan perawatan sistem komputer serta jaringan.</p>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div id="hero-slide-4" class="snap-start shrink-0 w-full relative h-[400px]">
+      <img src="./src/assets/TEI-Jurusan.jpg" alt="Journey" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent flex flex-col justify-end p-8">
+        <span class="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full mb-3 w-max tracking-wide">TEI</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Teknik Elektronika Industri</h2>
+        <p class="text-gray-200 max-w-md text-sm sm:text-base">Mempelajari cara instalasi, konfigurasi, dan perawatan sistem elektronika industri.</p>
+      </div>
+    </div>
+    <!-- Slide 5 -->
+    <div id="hero-slide-5" class="snap-start shrink-0 w-full relative h-[400px]">
+      <img src="./src/assets/MPLB.jpg" alt="Journey" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent flex flex-col justify-end p-8">
+        <span class="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full mb-3 w-max tracking-wide">ML</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Manajemen Logistik</h2>
+        <p class="text-gray-200 max-w-md text-sm sm:text-base">Mempelajari manajemen pergudangan dan  bisnis logistik.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Indicators -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+    <a href="#hero-slide-1" class="w-2 h-1.5 rounded-full bg-white/50 hover:bg-blue-500 transition-all"></a>
+    <a href="#hero-slide-2" class="w-2 h-1.5 rounded-full bg-white/50 hover:bg-blue-500 transition-all "></a>
+    <a href="#hero-slide-3" class="w-2 h-1.5 rounded-full bg-white/50 hover:bg-blue-500 transition-all"></a>
+    <a href="#hero-slide-4" class="w-2 h-1.5 rounded-full bg-white/50 hover:bg-blue-500 transition-all"></a>
+    <a href="#hero-slide-5" class="w-2 h-1.5 rounded-full bg-white/50 hover:bg-blue-500 transition-all"></a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+            <!-- //////////////////////////////////////////////-->
+<!--Program Sekolah-->
+<div class="py-16 bg-blue-100 dark:bg-gray-900 w-full overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+      <div>
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl mb-4">
+          Praktik Kerja Lapangan (PKL) dan Magang Industri
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+          Kami mendukung penuh program PKL dan Magang Peserta didik kami untuk mendapatkan pengalaman kerja nyata di industri. Melalui kemitraan dengan perusahaan-perusahaan terkemuka di KIIC. 
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-lime-100 dark:bg-lime-900/30 flex items-center justify-center mt-1">
+              <svg class="h-4 w-4 text-lime-600 dark:text-lime-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </div>
+            <p class="ml-3 text-gray-600 dark:text-gray-300">Penempatan di Kawasan KIIC </p>
+          </li>
+          <li class="flex items-start">
+            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-lime-100 dark:bg-lime-900/30 flex items-center justify-center mt-1">
+              <svg class="h-4 w-4 text-lime-600 dark:text-lime-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </div>
+            <p class="ml-3 text-gray-600 dark:text-gray-300">Membuka kesempatan untuk magang dan mengikuti pelatihan yang di sediakan oleh industri.</p>
+        </ul>
+      </div>
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard" class="rounded-2xl shadow-xl w-full object-cover h-80" />
+        <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-lime-400/20 dark:bg-lime-500/10 rounded-full blur-2xl"></div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1 relative">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Analytics" class="rounded-2xl shadow-xl w-full object-cover h-80" />
+        <div class="absolute -top-6 -right-6 w-24 h-24 bg-blue-400/20 dark:bg-blue-500/10 rounded-full blur-2xl"></div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl mb-4">
+          Program Kerja dan Kuliah Luar Negeri
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+          Kami membuka kesempatan bagi peserta didik kami yang ingin bekerja dan melanjutkan perguruan tinggi di luar negeri seperti German, Jepang, dan Turki.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- SIMI Program-->
+<div id="scroll-container" class=" bg-gradient-to-b from-cyan-500 to-blue-600 h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20">
+  <div class="py-10 md:py-40 w-full relative" style="perspective: 1000px;">
+    
+    <div id="scroll-header" class="max-w-5xl mx-auto text-center will-change-transform">
+      <h1 class="text-4xl md:text-7xl font-bold tracking-tight">
+        Keterserapan Tenaga Kerja Tinggi Dengan <br />
+        <span class="text-white">Program SIMI</span>
+      </h1>
+    </div>
+
+    <div 
+      id="scroll-card" 
+      class="w-[18rem] h-[35rem] md:w-[22rem] md:h-[45rem] -mt-12 mx-auto border-4 border-[#6C6C6C] p-2 md:p-3 bg-[#222222] rounded-[40px] transition-shadow duration-300 will-change-transform"
+      style="box-shadow: 0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003;"
+    >
+      <div class="h-full w-full overflow-hidden rounded-[2rem] bg-zinc-900 flex items-center justify-center">
+        <img 
+          src="./src/assets/simi.jpeg" 
+          alt="Mockup HP" 
+          class="w-full h-full object-cover" 
+        />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/src/simi.js" type="module"></script>
+<!--/////////////////////////////-->
+<!--Footer-->
+<footer class="py-8 px-6 bg-blue-300 dark:bg-blue-900 text-gray-600 dark:text-gray-400">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p>© SMK Perguruan Cikini KIIC Karawang.</p>
+    <div class="flex gap-6">
+      
+    </div>
+  </div>
+</footer></body>
+</html>
