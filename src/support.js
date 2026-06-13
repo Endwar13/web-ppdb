@@ -154,7 +154,7 @@ function populateCard(node) {
 }
 
 // 8. Animation Loop Utama
-function animate() {
+export function animate() {
     if (isOrbiting) {
         currentRotation += 0.08; 
     } else if (targetRotation !== null) {
@@ -175,4 +175,3 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-animate();

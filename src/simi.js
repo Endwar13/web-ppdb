@@ -6,7 +6,7 @@ function interpolate(value, x1, y1, x2, y2) {
   return x2 + ((value - x1) * (y2 - x2)) / (y1 - x1);
 }
 
-function handleScroll() {
+export function handleScroll() {
   if (!container || !header || !card) return; 
 
   const rect = container.getBoundingClientRect();
@@ -33,4 +33,3 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll, { passive: true });
 window.addEventListener('resize', handleScroll);
 
-handleScroll();

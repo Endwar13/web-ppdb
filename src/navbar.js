@@ -1,5 +1,11 @@
-const menuBtn = document.getElementById('menu-btn');
+// src/navbar.js
+
+export function initNavbar() {
+  const menuBtn = document.getElementById('menu-btn');
   const dropdownMenu = document.getElementById('dropdown-menu');
+
+  // Pengecekan: Jika elemen tidak ditemukan (misal di halaman lain), fungsi berhenti
+  if (!menuBtn || !dropdownMenu) return;
 
   // Toggle menu saat tombol diklik
   menuBtn.addEventListener('click', (e) => {
@@ -13,3 +19,4 @@ const menuBtn = document.getElementById('menu-btn');
       dropdownMenu.classList.add('hidden');
     }
   });
+}
