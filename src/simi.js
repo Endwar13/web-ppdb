@@ -7,7 +7,7 @@ function interpolate(value, x1, y1, x2, y2) {
 }
 
 function handleScroll() {
-  if (!container || !header || !card) return; // Pengaman jika elemen belum siap
+  if (!container || !header || !card) return; 
 
   const rect = container.getBoundingClientRect();
   const windowHeight = window.innerHeight;
@@ -33,5 +33,4 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll, { passive: true });
 window.addEventListener('resize', handleScroll);
 
-// Jalankan sekali di awal
 handleScroll();
