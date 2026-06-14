@@ -1,14 +1,14 @@
 // src/main.js
 import { initNavbar } from './navbar.js';
 import { handleScroll } from './simi.js';  
-import { animate } from './support.js';
+import { initOrbit } from './support.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
   // Jalankan fungsi navbar
   initNavbar();
   handleScroll();
-  animate();
+  initOrbit();
 
 
   
