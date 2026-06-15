@@ -1,435 +1,430 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon"  href="./src/assets/percik-logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>web-ppdb</title>
-    <link rel="stylesheet" href="/src/style.css" />
-    <style>
-        /* Memastikan Spline menutupi seluruh layar dan berada di belakang */
-        .spline-bg {
-            display: flex;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            justify-content: flex-end;
-        }
-        
-        /* Memberikan sedikit transparansi pada container FAQ agar terlihat menyatu */
-        .faq-glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-    </style>
-  </head>
-  <body class="bg-blue-100">
-    <div id="app"></div>
-    <!--Navigation-->
-    <header class="border-b border-gray-200 bg-blue-400 dark:border-gray-800 dark:bg-gray-900">
-      <div class="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <a href="#" title="" class="flex text-xl">
-          <span class="font-bold text-blue-800 dark:text-blue-200">PERCIK</span>
-          <span class="text-slate-600 dark:text-slate-300">.KIIC</span>
-        </a>
 
-        <div class="flex flex-1 items-center justify-end md:justify-between">
-          <nav aria-label="Global" class="hidden md:block">
-            <ul class="flex items-center gap-6 text-sm">
-              <li>
-                <a class="border-b-2 border-black-500 pb-5 text-sm font-medium text-gray-900 dark:border-black-400 dark:text-white" href="/index.html"> PPDB </a>
-              </li>
-              <li>
-                <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="/program.html"> Program </a>
-              </li>
-              <li>
-                <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="/Fasilitas.html"> Fasilitas </a>
-              </li>
-            </ul>
-          </nav>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./src/assets/percik-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>web-ppdb</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <style>
+    /* Memastikan Spline menutupi seluruh layar dan berada di belakang */
+    .spline-bg {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      justify-content: flex-end;
+    }
 
-          <div class="flex items-center gap-4">
-            <div class="hidden sm:flex sm:gap-4">
-              <a href="#" class="block shrink-0">
-                <span class="sr-only">Profile</span>
-                <img alt="Man" src="./src/assets/percik-logo.png" class="h-10 w-10 rounded-full object-cover" />
-              </a>
-            </div>
-            <!-- dropdown menu -->
-            <div class="relative inline-block text-left md:hidden">
-              <button id="menu-btn" class="p-2.5 text-gray-600 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+    /* Memberikan sedikit transparansi pada container FAQ agar terlihat menyatu */
+    .faq-glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
 
-              <div id="dropdown-menu" class="absolute right-0 z-50 mt-2 w-56 hidden origin-top-right transition-all duration-200 ease-out">
-                <div class="rounded-lg bg-white dark:bg-gray-900 shadow-lg ring-1 ring-black/5 dark:ring-white/10 overflow-hidden">
-                  <div class="p-1">
-                    <a href="/index.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">PPDB</a>
-                    <a href="/program.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">Program</a>
-                    <a href="/Fasilitas.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">Fasilitas</a>
-                  </div>
+<body class="bg-blue-100">
+  <div id="app"></div>
+  <!--Navigation-->
+  <header class="border-b border-gray-200 bg-blue-400 dark:border-gray-800 dark:bg-gray-900">
+    <div class="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+      <a href="#" title="" class="flex text-xl">
+        <span class="font-bold text-blue-800 dark:text-blue-200">PERCIK</span>
+        <span class="text-slate-600 dark:text-slate-300">.KIIC</span>
+      </a>
+
+      <div class="flex flex-1 items-center justify-end md:justify-between">
+        <nav aria-label="Global" class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm">
+            <li>
+              <a class="border-b-2 border-black-500 pb-5 text-sm font-medium text-gray-900 dark:border-black-400 dark:text-white"
+                href="/index.html"> PPDB </a>
+            </li>
+            <li>
+              <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                href="/program.html"> Program </a>
+            </li>
+            <li>
+              <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                href="/Fasilitas.html"> Fasilitas </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="hidden sm:flex sm:gap-4">
+            <a href="#" class="block shrink-0">
+              <span class="sr-only">Profile</span>
+              <img alt="Man" src="./src/assets/percik-logo.png" class="h-10 w-10 rounded-full object-cover" />
+            </a>
+          </div>
+          <!-- dropdown menu -->
+          <div class="relative inline-block text-left md:hidden">
+            <button id="menu-btn"
+              class="p-2.5 text-gray-600 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+
+            <div id="dropdown-menu"
+              class="absolute right-0 z-50 mt-2 w-56 hidden origin-top-right transition-all duration-200 ease-out">
+              <div
+                class="rounded-lg bg-white dark:bg-gray-900 shadow-lg ring-1 ring-black/5 dark:ring-white/10 overflow-hidden">
+                <div class="p-1">
+                  <a href="/index.html"
+                    class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">PPDB</a>
+                  <a href="/program.html"
+                    class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">Program</a>
+                  <a href="/Fasilitas.html"
+                    class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/10">Fasilitas</a>
                 </div>
               </div>
             </div>
-            <!-- //////////////////////////////////////////////-->
           </div>
-        </div>
-      </div>
-    </header>
-    <!--Hero-->
-
-    <section class="relative py-24 px-6 bg-gradient-to-br from-cyan-200 to-blue-500 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
-      <div class="absolute inset-0">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
-      </div>
-      
-      <div class="relative max-w-4xl mx-auto">
-        <div class="backdrop-blur-xl bg-white/60 dark:bg-white/10 border border-gray-200 dark:border-white/20 rounded-3xl p-12 text-center shadow-2xl">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            SMK Perguruan Cikini KIIC Karawang
-          </h1>
-          <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto">
-            "Future Vocational School"
-          </p>
-        </div>
-      </div>
-    </section>
-    <!--Banner-->
-    <div class="bg-blue-50 dark:bg-blue-400/10 border-l-4 border-blue-500 dark:border-blue-400 p-4">
-      <div class="flex">
-        <div class="flex-shrink-0">
-          <svg class="h-5 w-5 text-blue-400 dark:text-blue-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <div class="ml-3">
-          <p class="text-sm text-blue-700 dark:text-blue-300">
-            Daftar di gelombang pertama untuk mendapatkan potongan biaya pendaftaran sebesar 50%!
-          </p>
+          <!-- //////////////////////////////////////////////-->
         </div>
       </div>
     </div>
-    <!--Questions-->
-    <div class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 items-center">
-  
-      <div class="w-full md:w-1/2 space-y-4">
-        
-        <div class="mb-6 md:mb-8 text-left px-2">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-1 md:mb-2">
-            Informasi PPDB
-          </h2>
-          <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400">
-            Frequently asked questions
-          </p>
-        </div>
+  </header>
+  <!--Hero-->
 
-        <details open class="group rounded-xl sm:rounded-2xl border-2 border-neutral-200 dark:border-neutral-800 overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 ease-out">
-          <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 font-semibold text-sm sm:text-base text-neutral-800 dark:text-neutral-100 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors duration-200 ease-out group-open:bg-blue-100 dark:group-open:bg-blue-950/30 group-open:border-b-2 group-open:border-blue-200 dark:group-open:border-blue-900">
-            <span class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-              <span class="flex h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs sm:text-sm">1</span>
-              <span class="truncate sm:whitespace-normal">Apa Yang Perlu dibawa Saat Pendaftaran?</span>
-            </span>
-            <svg class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 ml-2 text-blue-600 dark:text-blue-400 transition-transform duration-300 ease-out group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed bg-gray-100 dark:bg-gray-800">
-            Untuk pendaftaran, Anda perlu membawa dokumen-dokumen berikut: Raport atau Ijazah SMP, dan Kartu Keluarga.
-          </div>
-        </details>
+  <section
+    class="relative py-24 px-6 bg-gradient-to-br from-cyan-200 to-blue-500 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
+    </div>
 
-        <details class="group rounded-xl sm:rounded-2xl border-2 border-neutral-200 dark:border-neutral-800 overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 ease-out">
-          <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 font-semibold text-sm sm:text-base text-neutral-800 dark:text-neutral-100 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors duration-200 ease-out group-open:bg-blue-100 dark:group-open:bg-blue-950/30 group-open:border-b-2 group-open:border-blue-200 dark:group-open:border-blue-900">
-            <span class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-              <span class="flex h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs sm:text-sm">2</span>
-              <span class="truncate sm:whitespace-normal">Kapan Pelayanan PPDB Dibuka?</span>
-            </span>
-            <svg class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 ml-2 text-blue-600 dark:text-blue-400 transition-transform duration-300 ease-out group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed bg-gray-100 dark:bg-gray-800">
-            Pelayanan PPDB kami buka setiap hari Senin hingga Jumat kecuali libur nasional, mulai pukul 07.30 hingga 16.00 WIB.
-          </div>
-        </details>
+    <div class="relative max-w-4xl mx-auto">
+      <div
+        class="backdrop-blur-xl bg-white/60 dark:bg-white/10 border border-gray-200 dark:border-white/20 rounded-3xl p-12 text-center shadow-2xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          SMK Perguruan Cikini KIIC Karawang
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto">
+          "Future Vocational School"
+        </p>
+      </div>
+    </div>
+  </section>
+  <!--Banner-->
+  <div class="bg-blue-50 dark:bg-blue-400/10 border-l-4 border-blue-500 dark:border-blue-400 p-4">
+    <div class="flex">
+      <div class="flex-shrink-0">
+        <svg class="h-5 w-5 text-blue-400 dark:text-blue-300" viewBox="0 0 20 20" fill="currentColor"
+          aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+      <div class="ml-3">
+        <p class="text-sm text-blue-700 dark:text-blue-300">
+          Daftar di gelombang pertama untuk mendapatkan potongan biaya pendaftaran sebesar 50%!
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Questions-->
+  <div class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 items-center">
 
-        <details class="group rounded-xl sm:rounded-2xl border-2 border-neutral-200 dark:border-neutral-800 overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 ease-out">
-          <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 font-semibold text-sm sm:text-base text-neutral-800 dark:text-neutral-100 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors duration-200 ease-out group-open:bg-blue-100 dark:group-open:bg-blue-950/30 group-open:border-b-2 group-open:border-blue-200 dark:group-open:border-blue-900">
-            <span class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-              <span class="flex h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs sm:text-sm">3</span>
-              <span class="truncate sm:whitespace-normal">Berapa Lama Periode Gelombang 1, 2, dan 3?</span>
-            </span>
-            <svg class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 ml-2 text-blue-600 dark:text-blue-400 transition-transform duration-300 ease-out group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed bg-gray-100 dark:bg-gray-800">
-            Periode Gelombang 1: 15 Jan - 30 Apr 2027<br>
-            Periode Gelombang 2: 1 Mei - 15 Juni 2027<br>
-            Periode Gelombang 3: 16 Juni - 15 Juli 2027
-          </div>
-        </details>
+    <div class="w-full md:w-1/2 space-y-4">
+
+      <div class="mb-6 md:mb-8 text-left px-2">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-800 dark:text-black mb-1 md:mb-2">
+          Informasi PPDB
+        </h2>
+        <p class="text-sm sm:text-base text-neutral-600 dark:text-black">
+          Frequently asked questions
+        </p>
       </div>
 
-  <div class="w-full md:w-1/2 h-[400px] md:h-[600px]  overflow-hidden ">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js" async></script>
-    <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/KPTvXDRlHmeeIqQp/scene.splinecode"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAANCAYAAADISGwcAAAG1ElEQVR4AQCBAH7/ADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgI3M0oONzNKGjczSiU3M0otNzNKMTczSjA3M0oqNzNKIDczShI3M0oCNzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgM3M0oIAIEAfv8ANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oBNzNKDDczShk3M0olNzNKMTczSjk3M0o9NzNKPDczSjY3M0osNzNKHjczSg43M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKCDczSgwAgQB+/wA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBzczShE3M0odNzNKKjczSjg3M0pDNzNKTDczSlA3M0pPNzNKSTczSj83M0owNzNKHzczSg43M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgc3M0oONzNKEgCBAH7/ADczSgk3M0oINzNKBzczSgY3M0oGNzNKCDczSg03M0oVNzNKIDczSi03M0o7NzNKSTczSlY3M0pfNzNKZDczSmM3M0pdNzNKUjczSkM3M0oxNzNKHzczSg43M0oANzNKADczSgA3M0oANzNKADczSgA3M0oENzNKDDczShM3M0oWAIEAfv8ANzNKDDczSgs3M0oKNzNKCjczSgs3M0oONzNKFDczShw3M0ooNzNKNjczSkU3M0pVNzNKYjczSmw3M0pxNzNKcDczSmo3M0pfNzNKTzczSj03M0oqNzNKGDczSgk3M0oANzNKADczSgA3M0oANzNKADczSgY3M0oNNzNKEzczShcAgQB+/wA3M0oJNzNKCTczSgg3M0oINzNKCTczSgw3M0oTNzNKHDczSig3M0o3NzNKRzczSlc3M0pkNzNKbzczSnQ3M0p0NzNKbjczSmM3M0pTNzNKQTczSi43M0obNzNKCzczSgA3M0oANzNKADczSgA3M0oANzNKBDczSgs3M0oRNzNKFACBAH7/ADczSgM3M0oCNzNKAjczSgE3M0oCNzNKBjczSgw3M0oVNzNKIjczSjE3M0pBNzNKUTczSl83M0ppNzNKbzczSm83M0pqNzNKXzczSlA3M0o9NzNKKjczShg3M0oINzNKADczSgA3M0oANzNKADczSgA3M0oBNzNKBzczSg03M0oQAIEAfv8ANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBDczSgw3M0oYNzNKJjczSjY3M0pFNzNKUzczSl43M0pkNzNKZDczSl83M0pVNzNKRjczSjQ3M0oiNzNKEDczSgE3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oFNzNKCzczSg4AgQB+/wA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKAzczSg43M0obNzNKKTczSjg3M0pFNzNKTzczSlU3M0pWNzNKUTczSkc3M0o5NzNKKDczShc3M0oHNzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgQ3M0oKNzNKDgCBAH7/ADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBDczSg83M0ocNzNKKjczSjY3M0o/NzNKRTczSkU3M0pANzNKNzczSio3M0obNzNKCzczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBDczSgs3M0oPAIEAfv8ANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBTczShA3M0ocNzNKJzczSjA3M0o1NzNKNTczSjE3M0ooNzNKGzczSg03M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oENzNKDDczShAAgQB+/wA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBzczShI3M0ocNzNKJDczSig3M0ooNzNKJDczShs3M0oPNzNKAjczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgQ3M0oMNzNKEAGBAH7/ADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oCNzNKDDczShU3M0odNzNKITczSiE3M0ocNzNKFDczSgg3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKAzczSgw3M0oQhaNJoZCQW2IAAAAASUVORK5CYII=" alt="Spline preview" style="width: 100%; height: 100%;"/></spline-viewer>  </div>
+      <details open
+        class="group rounded-xl sm:rounded-2xl border-2 border-neutral-200 dark:border-neutral-800 overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 ease-out">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 font-semibold text-sm sm:text-base text-neutral-800 dark:text-neutral-100 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors duration-200 ease-out group-open:bg-blue-100 dark:group-open:bg-blue-950/30 group-open:border-b-2 group-open:border-blue-200 dark:group-open:border-blue-900">
+          <span class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+            <span
+              class="flex h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs sm:text-sm">1</span>
+            <span class="truncate sm:whitespace-normal">Apa Yang Perlu dibawa Saat Pendaftaran?</span>
+          </span>
+          <svg
+            class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 ml-2 text-blue-600 dark:text-blue-400 transition-transform duration-300 ease-out group-open:rotate-180"
+            fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div
+          class="px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed bg-gray-100 dark:bg-gray-800">
+          Untuk pendaftaran, Anda perlu membawa dokumen-dokumen berikut: Raport atau Ijazah SMP, dan Kartu Keluarga.
+        </div>
+      </details>
+
+      <details
+        class="group rounded-xl sm:rounded-2xl border-2 border-neutral-200 dark:border-neutral-800 overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 ease-out">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 font-semibold text-sm sm:text-base text-neutral-800 dark:text-neutral-100 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors duration-200 ease-out group-open:bg-blue-100 dark:group-open:bg-blue-950/30 group-open:border-b-2 group-open:border-blue-200 dark:group-open:border-blue-900">
+          <span class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+            <span
+              class="flex h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs sm:text-sm">2</span>
+            <span class="truncate sm:whitespace-normal">Kapan Pelayanan PPDB Dibuka?</span>
+          </span>
+          <svg
+            class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 ml-2 text-blue-600 dark:text-blue-400 transition-transform duration-300 ease-out group-open:rotate-180"
+            fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div
+          class="px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed bg-gray-100 dark:bg-gray-800">
+          Pelayanan PPDB kami buka setiap hari Senin hingga Jumat kecuali libur nasional, mulai pukul 07.30 hingga 16.00
+          WIB.
+        </div>
+      </details>
+
+      <details
+        class="group rounded-xl sm:rounded-2xl border-2 border-neutral-200 dark:border-neutral-800 overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 ease-out">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 font-semibold text-sm sm:text-base text-neutral-800 dark:text-neutral-100 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors duration-200 ease-out group-open:bg-blue-100 dark:group-open:bg-blue-950/30 group-open:border-b-2 group-open:border-blue-200 dark:group-open:border-blue-900">
+          <span class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+            <span
+              class="flex h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs sm:text-sm">3</span>
+            <span class="truncate sm:whitespace-normal">Berapa Lama Periode Gelombang 1, 2, dan 3?</span>
+          </span>
+          <svg
+            class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 ml-2 text-blue-600 dark:text-blue-400 transition-transform duration-300 ease-out group-open:rotate-180"
+            fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div
+          class="px-4 py-4 sm:px-5 sm:py-4 md:px-6 md:py-5 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed bg-gray-100 dark:bg-gray-800">
+          Periode Gelombang 1: 15 Jan - 30 Apr 2027<br>
+          Periode Gelombang 2: 1 Mei - 15 Juni 2027<br>
+          Periode Gelombang 3: 16 Juni - 15 Juli 2027
+        </div>
+      </details>
+    </div>
+
+    <div class="w-full md:w-1/2 h-[400px] md:h-[600px]  overflow-hidden ">
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js" async></script>
+      <spline-viewer loading-anim-type="spinner-small-dark"
+        url="https://prod.spline.design/KPTvXDRlHmeeIqQp/scene.splinecode"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAANCAYAAADISGwcAAAG1ElEQVR4AQCBAH7/ADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgI3M0oONzNKGjczSiU3M0otNzNKMTczSjA3M0oqNzNKIDczShI3M0oCNzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgM3M0oIAIEAfv8ANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oBNzNKDDczShk3M0olNzNKMTczSjk3M0o9NzNKPDczSjY3M0osNzNKHjczSg43M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKCDczSgwAgQB+/wA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBzczShE3M0odNzNKKjczSjg3M0pDNzNKTDczSlA3M0pPNzNKSTczSj83M0owNzNKHzczSg43M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgc3M0oONzNKEgCBAH7/ADczSgk3M0oINzNKBzczSgY3M0oGNzNKCDczSg03M0oVNzNKIDczSi03M0o7NzNKSTczSlY3M0pfNzNKZDczSmM3M0pdNzNKUjczSkM3M0oxNzNKHzczSg43M0oANzNKADczSgA3M0oANzNKADczSgA3M0oENzNKDDczShM3M0oWAIEAfv8ANzNKDDczSgs3M0oKNzNKCjczSgs3M0oONzNKFDczShw3M0ooNzNKNjczSkU3M0pVNzNKYjczSmw3M0pxNzNKcDczSmo3M0pfNzNKTzczSj03M0oqNzNKGDczSgk3M0oANzNKADczSgA3M0oANzNKADczSgY3M0oNNzNKEzczShcAgQB+/wA3M0oJNzNKCTczSgg3M0oINzNKCTczSgw3M0oTNzNKHDczSig3M0o3NzNKRzczSlc3M0pkNzNKbzczSnQ3M0p0NzNKbjczSmM3M0pTNzNKQTczSi43M0obNzNKCzczSgA3M0oANzNKADczSgA3M0oANzNKBDczSgs3M0oRNzNKFACBAH7/ADczSgM3M0oCNzNKAjczSgE3M0oCNzNKBjczSgw3M0oVNzNKIjczSjE3M0pBNzNKUTczSl83M0ppNzNKbzczSm83M0pqNzNKXzczSlA3M0o9NzNKKjczShg3M0oINzNKADczSgA3M0oANzNKADczSgA3M0oBNzNKBzczSg03M0oQAIEAfv8ANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBDczSgw3M0oYNzNKJjczSjY3M0pFNzNKUzczSl43M0pkNzNKZDczSl83M0pVNzNKRjczSjQ3M0oiNzNKEDczSgE3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oFNzNKCzczSg4AgQB+/wA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKAzczSg43M0obNzNKKTczSjg3M0pFNzNKTzczSlU3M0pWNzNKUTczSkc3M0o5NzNKKDczShc3M0oHNzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgQ3M0oKNzNKDgCBAH7/ADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBDczSg83M0ocNzNKKjczSjY3M0o/NzNKRTczSkU3M0pANzNKNzczSio3M0obNzNKCzczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBDczSgs3M0oPAIEAfv8ANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBTczShA3M0ocNzNKJzczSjA3M0o1NzNKNTczSjE3M0ooNzNKGzczSg03M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oENzNKDDczShAAgQB+/wA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKBzczShI3M0ocNzNKJDczSig3M0ooNzNKJDczShs3M0oPNzNKAjczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgQ3M0oMNzNKEAGBAH7/ADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oCNzNKDDczShU3M0odNzNKITczSiE3M0ocNzNKFDczSgg3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKADczSgA3M0oANzNKAzczSgw3M0oQhaNJoZCQW2IAAAAASUVORK5CYII="
+          alt="Spline preview" style="width: 100%; height: 100%;" /></spline-viewer>
+    </div>
   </div>
 
   <!--Formulir Pendaftaran-->
   <!--/////////////////////////////-->
-<div class="bg-blue-100 dark:bg-gray-900 py-12 px-4">
-  <div class="max-w-4xl mx-auto">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Formulir Pendaftaran</h2>
-      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
-        Silakan lengkapi data diri Anda pada formulir di bawah ini.
-      </p>
-    </div>
+  <div class="bg-blue-100 dark:bg-gray-900 py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Formulir Pendaftaran</h2>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          Silakan lengkapi data diri Anda pada formulir di bawah ini.
+        </p>
+      </div>
 
-    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 md:p-8">
-      <form class="space-y-6">
-        
-        <div>
-          <label for="nama" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Nama Lengkap
-          </label>
-          <input
-            type="text"
-            id="nama"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-            placeholder="Masukkan nama lengkap"
-          >
-        </div>
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 md:p-8">
+        <form class="space-y-6">
 
-        <div>
-          <label for="kompetensi" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Kompetensi Keahlian
-          </label>
-          <input
-            type="text"
-            id="kompetensi"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-            placeholder="Contoh: Rekayasa Perangkat Lunak"
-          >
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label for="tempat-lahir" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Tempat Lahir
+            <label for="nama" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Nama Lengkap
             </label>
-            <input
-              type="text"
-              id="tempat-lahir"
+            <input type="text" id="nama"
               class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-              placeholder="Kota kelahiran"
-            >
+              placeholder="Masukkan nama lengkap">
           </div>
+
           <div>
-            <label for="tanggal-lahir" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Tanggal Lahir
+            <label for="kompetensi" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Kompetensi Keahlian
             </label>
-            <input
-              type="date"
-              id="tanggal-lahir"
+            <input type="text" id="kompetensi"
               class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-            >
+              placeholder="Contoh: Rekayasa Perangkat Lunak">
           </div>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="tempat-lahir" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Tempat Lahir
+              </label>
+              <input type="text" id="tempat-lahir"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
+                placeholder="Kota kelahiran">
+            </div>
+            <div>
+              <label for="tanggal-lahir" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Tanggal Lahir
+              </label>
+              <input type="date" id="tanggal-lahir"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="jenis-kelamin" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Jenis Kelamin
+              </label>
+              <select id="jenis-kelamin"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white">
+                <option value="" disabled selected>Pilih jenis kelamin</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+            </div>
+            <div>
+              <label for="agama" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Agama
+              </label>
+              <select id="agama"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white">
+                <option value="" disabled selected>Pilih agama</option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen Protestan">Kristen Protestan</option>
+                <option value="Katolik">Katolik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Konghucu">Konghucu</option>
+              </select>
+            </div>
+          </div>
+
           <div>
-            <label for="jenis-kelamin" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Jenis Kelamin
+            <label for="alamat-rumah" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Alamat Rumah
             </label>
-            <select
-              id="jenis-kelamin"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-            >
-              <option value="" disabled selected>Pilih jenis kelamin</option>
-              <option value="Laki-laki">Laki-laki</option>
-              <option value="Perempuan">Perempuan</option>
-            </select>
+            <textarea id="alamat-rumah" rows="3"
+              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white resize-none"
+              placeholder="Masukkan alamat rumah lengkap..."></textarea>
           </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="tinggi-badan" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Tinggi Badan (cm)
+              </label>
+              <input type="number" id="tinggi-badan"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
+                placeholder="Contoh: 165">
+            </div>
+            <div>
+              <label for="berat-badan" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Berat Badan (kg)
+              </label>
+              <input type="number" id="berat-badan"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
+                placeholder="Contoh: 55">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="asal-sekolah" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Asal Sekolah
+              </label>
+              <input type="text" id="asal-sekolah"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
+                placeholder="Nama sekolah asal">
+            </div>
+            <div>
+              <label for="tahun-lulus" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Tahun Lulus
+              </label>
+              <input type="number" id="tahun-lulus"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
+                placeholder="Contoh: 2024">
+            </div>
+          </div>
+
           <div>
-            <label for="agama" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Agama
+            <label for="alamat-sekolah" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Alamat Sekolah
             </label>
-            <select
-              id="agama"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-            >
-              <option value="" disabled selected>Pilih agama</option>
-              <option value="Islam">Islam</option>
-              <option value="Kristen Protestan">Kristen Protestan</option>
-              <option value="Katolik">Katolik</option>
-              <option value="Hindu">Hindu</option>
-              <option value="Buddha">Buddha</option>
-              <option value="Konghucu">Konghucu</option>
-            </select>
+            <textarea id="alamat-sekolah" rows="2"
+              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white resize-none"
+              placeholder="Masukkan alamat sekolah..."></textarea>
           </div>
-        </div>
 
-        <div>
-          <label for="alamat-rumah" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Alamat Rumah
-          </label>
-          <textarea
-            id="alamat-rumah"
-            rows="3"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white resize-none"
-            placeholder="Masukkan alamat rumah lengkap..."
-          ></textarea>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label for="tinggi-badan" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Tinggi Badan (cm)
+            <label for="nama-ortu" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Nama Orang Tua / Wali
             </label>
-            <input
-              type="number"
-              id="tinggi-badan"
+            <input type="text" id="nama-ortu"
               class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-              placeholder="Contoh: 165"
-            >
+              placeholder="Masukkan nama orang tua atau wali">
           </div>
+
           <div>
-            <label for="berat-badan" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Berat Badan (kg)
+            <label for="alamat-ortu" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Alamat Orang Tua
             </label>
-            <input
-              type="number"
-              id="berat-badan"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-              placeholder="Contoh: 55"
-            >
+            <textarea id="alamat-ortu" rows="2"
+              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white resize-none"
+              placeholder="Masukkan alamat lengkap orang tua..."></textarea>
           </div>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label for="asal-sekolah" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Asal Sekolah
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="telepon" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Nomor Telepon / WhatsApp
+              </label>
+              <input type="tel" id="telepon"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
+                placeholder="Contoh: 08123456789">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Email
+              </label>
+              <input type="email" id="email"
+                class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
+                placeholder="email_anda@example.com">
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <input id="persetujuan" type="checkbox"
+              class="h-4 w-4 text-blue-600 dark:text-blue-400 focus:ring-blue-500 dark:focus:ring-blue-400 border-gray-300 dark:border-gray-600 rounded">
+            <label for="persetujuan" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">
+              Saya memastikan bahwa data yang dimasukkan di atas adalah
+              <span class="font-semibold">benar dan dapat dipertanggungjawabkan</span>.
             </label>
-            <input
-              type="text"
-              id="asal-sekolah"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-              placeholder="Nama sekolah asal"
-            >
           </div>
-          <div>
-            <label for="tahun-lulus" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Tahun Lulus
-            </label>
-            <input
-              type="number"
-              id="tahun-lulus"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-              placeholder="Contoh: 2024"
-            >
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button type="submit"
+              class="flex-1 bg-blue-600 dark:bg-blue-600 text-white dark:text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800 transition-colors">
+              Kirim Formulir
+            </button>
           </div>
-        </div>
 
-        <div>
-          <label for="alamat-sekolah" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Alamat Sekolah
-          </label>
-          <textarea
-            id="alamat-sekolah"
-            rows="2"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white resize-none"
-            placeholder="Masukkan alamat sekolah..."
-          ></textarea>
-        </div>
-
-        <div>
-          <label for="nama-ortu" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Nama Orang Tua / Wali
-          </label>
-          <input
-            type="text"
-            id="nama-ortu"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-            placeholder="Masukkan nama orang tua atau wali"
-          >
-        </div>
-
-        <div>
-          <label for="alamat-ortu" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Alamat Orang Tua
-          </label>
-          <textarea
-            id="alamat-ortu"
-            rows="2"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white resize-none"
-            placeholder="Masukkan alamat lengkap orang tua..."
-          ></textarea>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label for="telepon" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Nomor Telepon / WhatsApp
-            </label>
-            <input
-              type="tel"
-              id="telepon"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-              placeholder="Contoh: 08123456789"
-            >
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors text-gray-900 dark:text-white"
-              placeholder="email_anda@example.com"
-            >
-          </div>
-        </div>
-
-        <div class="flex items-center">
-          <input
-            id="persetujuan"
-            type="checkbox"
-            class="h-4 w-4 text-blue-600 dark:text-blue-400 focus:ring-blue-500 dark:focus:ring-blue-400 border-gray-300 dark:border-gray-600 rounded"
-          >
-          <label for="persetujuan" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">
-            Saya memastikan bahwa data yang dimasukkan di atas adalah 
-            <span class="font-semibold">benar dan dapat dipertanggungjawabkan</span>.
-          </label>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4 pt-4">
-          <button
-            type="submit"
-            class="flex-1 bg-blue-600 dark:bg-blue-600 text-white dark:text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800 transition-colors"
-          >
-            Kirim Formulir
-          </button>
-        </div>
-        
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-<!--/////////////////////////////-->
-<!--Footer-->
-<footer class="py-8 px-6 bg-blue-300 dark:bg-blue-900 text-gray-600 dark:text-gray-400">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <p>© SMK Perguruan Cikini KIIC Karawang.</p>
-    <div class="flex gap-6">
-      
+  <!--/////////////////////////////-->
+  <!--Footer-->
+  <footer class="py-8 px-6 bg-blue-300 dark:bg-blue-900 text-gray-600 dark:text-gray-400">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© SMK Perguruan Cikini KIIC Karawang.</p>
+      <div class="flex gap-6">
+
+      </div>
     </div>
-  </div>
-</footer>
-    <script type="module" src="/src/main.js"></script>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
