@@ -50,7 +50,7 @@ export function initFormHandler() {
     // Ambil data dari form
     const formData = {
       namaLengkap: document.getElementById('nama').value.trim(),
-      kompetensiKeahlian: document.getElementById('kompetensi').value.trim(),
+      kompetensiKeahlian: document.getElementById('kompetensi').value,
       tempatLahir: document.getElementById('tempat-lahir').value.trim(),
       tanggalLahir: document.getElementById('tanggal-lahir').value,
       jenisKelamin: document.getElementById('jenis-kelamin').value,
@@ -99,7 +99,6 @@ export function initFormHandler() {
  * @param {'success'|'error'} type - Tipe notifikasi
  */
 function showNotification(message, type = 'success') {
-  // Hapus notifikasi lama jika ada
   const existing = document.getElementById('ppdb-notification');
   if (existing) existing.remove();
 
